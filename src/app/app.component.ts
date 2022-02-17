@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cmp-databinding-assignment-start';
+  numbers: number[] = [];
+  
+  onIntervalFired(data: {lastNumber: number}) {
+    this.numbers.push(data.lastNumber);
+  }
 }
